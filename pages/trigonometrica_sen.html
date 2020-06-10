@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>AAI - Cálculo 1</title>
+
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script type="text/javascript" src="../js/jquery-3.2.1.slim.min.js"></script>
+		<script type="text/javascript" src="../js/popper.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="../css/css.css" type="text/css">
+		<script type="text/javascript" src="../js/js.js"></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<a class="navbar-brand" href="#">AAI</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="calculadora.html">Calculadora</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Conteúdo -->
+		<div id="content-box" class="container">
+			<div class="row">
+				<!-- LISTA DERIVAR -->
+				<div class="col-2">
+					<div class="container" align=center>
+						<h5>Derivar:</h5>
+					</div>
+					<ul id="opcoes-box" class="list-group" align=center>
+						<a href="polinomial.html" style="color: black;">
+							<li class="list-group-item list-group-item-action">
+								Polinomial
+							</li>
+						</a>
+						<a href="trigonometrica.html" style="color: black;">
+							<li class="list-group-item list-group-item-action active">
+								Trigonométrica
+							</li>
+						</a>
+						<a href="logaritmica.html" style="color: black;">
+							<li class="list-group-item list-group-item-action">
+								Logarítmica
+							</li>
+						</a>
+					</ul>
+				</div>
+				<!-- FIM LISTA DERIVAR -->
+
+				<!-- CALCULADORA -->
+				<div class="col-10">
+					<div class="container" align=center>
+						<h3>Calculadora:</h3>
+						<hr>
+						<h4>f(x) = sen <i>u</i></h4>
+						<hr>
+						<form align=left>
+							<div class="row">
+								<div class="col-12">
+									<div class="form-group">
+										<div id="funcaoA" class="jumbotron" style="padding-top: 20px;">
+											<div class="col-12" align=center>
+												<h5> <label for="funcaoA">Onde <i>u</i> é uma função: </label> y = <i>a</i>x + <i>b</i> </h5>
+											</div>
+											<div class="row">
+												<div class="col-6">
+													<label for="campoFuncaoA">Valor de <i>a</i>: </label>
+													<input type="text" class="form-control" id="campoA" aria-describedby="campoA" value="0" onkeypress="return numbersOnly(this, event, true, true);" onblur="numbersCorrectFormatOnBlur(this); numbersCorrectFormatZeroOnBlur(this)" onfocus="numbersCorrectFormatZeroOnFocus(this);">
+												</div>
+												<div class="col-6">
+													<label for="campoFuncaoB">Valor de <i>b</i>: </label>
+													<input type="text" class="form-control" id="campoB" aria-describedby="campoB" value="0" onkeypress="return numbersOnly(this, event, true, true);" onblur="numbersCorrectFormatOnBlur(this); numbersCorrectFormatZeroOnBlur(this)" onfocus="numbersCorrectFormatZeroOnFocus(this);">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12" align=center>
+									<div class="container">
+										<div id="alert-info" class="alert alert-info" role="alert">
+											<div id="preview-text">
+												Visualização da Função:
+											</div>
+										</div>
+										<div id="alert-success" class="alert alert-success" role="alert">
+											<div id="result-text">
+												Resultado da Derivada:
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-4">
+								</div>
+								<div class="col-4">
+									<button id="id-calcular-derivada" type="button" onclick="sineDerivative(document.getElementById('preview-text'), document.getElementById('result-text'));" class="btn btn-success" style="width: 75%;"> Calcular </button>
+								</div>
+								<div class="col-4">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- FIM DA CALCULADORA -->
+			</div>
+		</div>
+	</body>
+</html>
